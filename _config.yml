@@ -1,10 +1,10 @@
 # Site settings
-title: ZK Blog
-SEOTitle: 旗帜的博客 | ZK Blog
+title: zakun 随手记
+SEOTitle: zakun 随手记 | zakun Blog
 header-img: img/post-bg-desk.jpg
 email: qzk80@gmail.com
 description: "Every failure is leading towards success."
-keyword: "ZK, ZK Blog, 旗帜的博客, zakun, php, mysql, nginx"
+keyword: "zakun, blog, 博客, 随手记, php, mysql, nginx"
 url: "http://zakun.github.io"          # your host, for absolute URL
 baseurl: "/blog"      # for example, '/blog' if your blog hosted on 'host/blog'
 github_repo: "https://github.com/zakun/blog.git" # you code repository
@@ -15,9 +15,8 @@ sidebar-about-description: "Don't be pushed by your problems. Be led by your dre
 sidebar-avatar: /blog/img/zakun.jpeg      # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
-
 # SNS settings
-RSS: false
+RSS: true
 # weibo_username:     qiubaiying
 #zhihu_username:     qiubaiying
 github_username:    zakun
@@ -98,11 +97,11 @@ service-worker: true
 
 # Friends
 friends: [
-    {
-        title: "Jekyll",
-        href: "https://jekyllrb.com/docs/structure"
-    },{
-        title: "gitHub",
-        href: "https://github.com/zakun"
-    }
+{
+  title: "Jekyll",
+  href: "https://jekyllrb.com/docs/structure"
+},{
+  title: "gitHub",
+  href: "https://github.com/zakun"
+}
 ]
