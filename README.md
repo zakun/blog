@@ -2,8 +2,7 @@
 
 ![](https://raw.githubusercontent.com/zakun/blog/master/img/readme-home.jpg)
 
->
-### [查看博客戳这里 👆](http://zakun.github.io/blog)
+>### [查看博客戳这里 👆](http://zakun.github.io/blog)
 
 
 
