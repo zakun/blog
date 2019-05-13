@@ -1,25 +1,23 @@
 ---
 layout:     post
 title:      Working with LOBs in Oracle and PHP
-subtitle:   how to working oracle Lobs with php
+subtitle:   How to working oracle Lobs with php
 date:       2019-05-13
 author:     zakun
-header-img: img/big_banner/post-bg-coffee.jpeg
+header-img: img/big_banner/post-bg-keyboard.jpg
 catalog: true
 tags:
     - oracle
     - PHP
 	- LOBS
 ---
-
-
 The Oracle + PHP Cookbook
 ===
 
 Working with LOBs in Oracle and PHP
 ---
 
-[原文链接](https://www.oracle.com/technetwork/articles/fuecks-lobs-095315.html)
+<a href="https://www.oracle.com/technetwork/articles/fuecks-lobs-095315.html">原文链接</a>
 
 Hitting the 4,000-byte limit? Enter LOBs...
 
