@@ -1,6 +1,6 @@
 ---
 layout:     post
-title:      Working with LOBs in Oracle and PHP
+title:      Working with LOBs in oracle and php
 subtitle:   How to working oracle Lobs with php
 date:       2019-05-13
 author:     zakun
