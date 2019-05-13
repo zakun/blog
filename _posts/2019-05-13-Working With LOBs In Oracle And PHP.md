@@ -17,14 +17,14 @@ The Oracle + PHP Cookbook
 Working with LOBs in Oracle and PHP
 ---
 
-<a href="https://www.oracle.com/technetwork/articles/fuecks-lobs-095315.html">原文链接</a>
+<a href="https://www.oracle.com/technetwork/articles/fuecks-lobs-095315.html" target="_blank">原文链接</a>
 
-Hitting the 4,000-byte limit? Enter LOBs...
+### Hitting the 4,000-byte limit? Enter LOBs...
 
 Downloads for this article:
-   *Oracle Database 10g
-   *Zend Core for Oracle
-   *Apache HTTP Server 1.3 and later
+   * Oracle Database 10g
+   * Zend Core for Oracle
+   * Apache HTTP Server 1.3 and later
 Working with Oracle types like VARCHAR2 is fine, but what if you need to be able to store more than its 4,000-byte limit in one go? For this task, you need one of Oracle's Long Object (LOB) types, which in turn requires that you learn how to use the PHP API for working with LOBs. That in itself can be daunting for those unfamiliar with it.
 
 In this "Oracle+PHP Cookbook" HowTo, you will learn the available LOB types and issues related to them, then explore examples of common LOB operations in PHP.
@@ -33,10 +33,10 @@ Long Objects in Oracle
 
 Oracle provides the following LOB types:
 
-*BLOB, used to store binary data
-*CLOB, used to store character data using the database character set encoding
-*NCLOB, used to store Unicode character data using the national character set. Note that NCLOBs are, currently, not supported by the PHP OCI8 extension, which you'll be using here.
-*BFILE, used to reference external files under the operating system's filesystem
+* BLOB, used to store binary data
+* CLOB, used to store character data using the database character set encoding
+* NCLOB, used to store Unicode character data using the national character set. Note that NCLOBs are, currently, not supported by the PHP OCI8 extension, which you'll be using here.
+* BFILE, used to reference external files under the operating system's filesystem
 
 A further subcategory of LOB is the temporary LOB, which can be either a BLOB, CLOB, or NCLOB but is stored in the temporary tablespace until you free it.
 Note that older versions of Oracle provided the LONG and LONG RAW types for character and binary data, respectively. With Oracle9i these were deprecated in favor of LOBs.
@@ -51,14 +51,14 @@ There are further options for LOB storage and access—such as memory caching an
 
 Restrictions on LOBs. A number of restrictions apply to the use of LOB types, the most important being their use in SQL statements. You cannot use a LOB type in any of the following queries.
 
-SELECT DISTINCT <lob_type>
-ORDER BY <lob_type>
-GROUP BY <lob_col>
+	SELECT DISTINCT <lob_type>
+	ORDER BY <lob_type>
+	GROUP BY <lob_col>
 
 It is also illegal to use a LOB type column for table joins, UNION, INTERSECTION, and MINUS statements.
 Further restrictions apply to other aspects of the use of LOBs, such as you cannot use LOB as a primary key column. Again, see [Oracle Database Application Developer's Guide](http://download.oracle.com/docs/cd/B19306_01/appdev.102/b14249/toc.htm) - Large Objects for details.
 
-CLOBs and Character Sets
+### CLOBs and Character Sets
 
 The default character set for your database is defined by the parameter NLS_CHARACTERSET and text placed in a CLOB is expected to be encoded using this character set. Use this SQL to determine your databases character set encoding:
 
@@ -338,7 +338,7 @@ For PHP 4.x, where truncate() is unavailable, the following alternative solution
 	$mylob->free();
 	OCIFreeStatement($stmt);
 
-Working with BFILES
+### Working with BFILES
 When using the BFILE type, INSERTs and UPDATEs mean telling Oracle where the file is located within the filesystem of the database server (which may not be the same machine as the Web server), rather than passing the file content. Using a SELECT statement, you can read the contents of the BFILE through Oracle, should you so desire, or call functions and procedures from the DBMS_LOB package to get information about the file.
 
 The main advantage of BFILEs is being able to access the original files directly from the filesystem while still being able to locate files using SQL. This means, for example, images can be served directly by the Web server while I can keep track of the relationship between the table containing the BFILES and, say, a "users" table, telling me who uploaded the files.
