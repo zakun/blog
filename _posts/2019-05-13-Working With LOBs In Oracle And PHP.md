@@ -9,7 +9,7 @@ catalog: true
 tags:
     - oracle
     - php
-	- clob
+    - clob
 ---
 The Oracle + PHP Cookbook
 ===
